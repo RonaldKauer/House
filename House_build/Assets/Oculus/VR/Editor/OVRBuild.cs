@@ -41,12 +41,13 @@ partial class OculusBuildApp
 	static void SetAndroidTarget()
 	{
 		EditorUserBuildSettings.androidBuildSubtarget = MobileTextureSubtarget.ASTC;
-		EditorUserBuildSettings.androidBuildSystem = AndroidBuildSystem.Internal;
+		EditorUserBuildSettings.androidBuildSystem = AndroidBuildSystem.Gradle;
 
 		if (EditorUserBuildSettings.activeBuildTarget != BuildTarget.Android)
 		{
 			EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Android, BuildTarget.Android);
 		}
+
 
 		UnityEditorInternal.VR.VREditor.SetVREnabledOnTargetGroup(BuildTargetGroup.Standalone, true);
 		PlayerSettings.virtualRealitySupported = true;
