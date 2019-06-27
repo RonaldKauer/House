@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Play_Button : MonoBehaviour
+public class Recording : MonoBehaviour
 {
     // Start is called before the first frame update
-    public AudioSource testSound;
-
     void Start()
     {
         
@@ -17,13 +15,4 @@ public class Play_Button : MonoBehaviour
     {
         
     }
-
-     void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "PLay_Button")
-        {
-            testSound.Play();
-        }
-    }
-
 }
