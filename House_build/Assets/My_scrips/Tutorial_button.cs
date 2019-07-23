@@ -62,6 +62,10 @@ public class Tutorial_button : MonoBehaviour
 	{
 		Debug.Log("IM CLICKING PLS");
 		SceneManager.LoadScene(1);
+	}private void OnMouseDown()
+	{
+		Debug.Log("IM CLICKING PLS");
+		SceneManager.LoadScene(1);
 	}
 		
 	// //Handle the DoubleClick event
