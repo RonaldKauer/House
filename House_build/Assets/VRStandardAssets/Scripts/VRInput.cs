@@ -82,7 +82,7 @@ namespace VRStandardAssets.Utils
                 OnSwipe(swipe);
 
             // This if statement is to trigger events based on the information gathered before.
-			if(Input.GetButtonUp ("Fire1") )
+            if(Input.GetButtonUp ("Fire1"))
             {
                 // If anything has subscribed to OnUp call it.
                 if (OnUp != null)
@@ -100,8 +100,7 @@ namespace VRStandardAssets.Utils
                 {
                     // If it's not a double click, it's a single click.
                     // If anything has subscribed to OnClick call it.
-					if (OnClick != null)
-						Debug.Log ("Clicking");
+                    if (OnClick != null)
                         OnClick();
                 }
 

@@ -72,7 +72,5 @@ namespace VRStandardAssets.Utils
             if (OnDown != null)
                 OnDown();
         }
-
-
     }
 }
