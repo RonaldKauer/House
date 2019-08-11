@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Close_button
+  - Button
+  - touch_controller
+  - Kitchen_but
+  - Chair
+  - Hand
+  - Living_room_but
+  - Bedroom_but
+  - Bathroom_but
+  - Tutorial
+  - el inodoro
+  - "la ba\xF1era"
+  - el fregadero
+  - el espejo
   layers:
   - Default
   - TransparentFX

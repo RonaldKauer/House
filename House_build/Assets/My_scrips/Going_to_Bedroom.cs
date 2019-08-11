@@ -5,15 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Going_to_Bedroom : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Bedroom_but")
+        {
+            SceneManager.LoadScene("Bedroom");
+            // canvasObj2.SetActive(false);
+
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
+

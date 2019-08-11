@@ -23,12 +23,8 @@ public class Tset : MonoBehaviour
         }
     }
     void Start(){
-			testSound = GetComponent<AudioSource>();
-    }
-    // Start is called before the first frame update
-    void OnMouseDown()
-    {
-        actions.Add("la silla", mesa);
+		testSound = GetComponent<AudioSource>();
+        actions.Add("la siya", mesa);
         actions.Add("okay", okay);
         yes = true;
 
@@ -36,6 +32,7 @@ public class Tset : MonoBehaviour
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech; 
         keywordRecognizer.Start();
     }
+    // Start is called before the first frame update
 
     private void RecognizedSpeech(PhraseRecognizedEventArgs speech){
         Debug.Log(speech.text);
