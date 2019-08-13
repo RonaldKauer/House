@@ -1036,8 +1036,8 @@ GameObject:
   - component: {fileID: 1833769328}
   - component: {fileID: 1833769327}
   - component: {fileID: 1833769326}
-  - component: {fileID: 1833769325}
   - component: {fileID: 1833769324}
+  - component: {fileID: 1833769325}
   m_Layer: 0
   m_Name: Tutorial_button
   m_TagString: Untagged
@@ -1080,7 +1080,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1833769322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f9340b0c74173c48a4436db9ec5efa9, type: 3}
+  m_Script: {fileID: 11500000, guid: e6a3e7a7c4c0fe341b8a01f56530c40d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_NormalMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}

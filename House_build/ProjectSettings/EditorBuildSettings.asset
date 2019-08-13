@@ -5,24 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Vr_folder/VRSampleScenes/Scenes/Intro.unity
-    guid: 1c5fe2bf037ade84ca9ed9d97b0e1b97
-  - enabled: 0
-    path: Assets/Vr_folder/VRSampleScenes/Scenes/MainMenu.unity
-    guid: 3959fdef1e02d4d4fb01414c7de44414
-  - enabled: 0
-    path: Assets/Vr_folder/VRSampleScenes/Scenes/Maze.unity
-    guid: 00d8d8904282de34ca5c4e676602d75f
-  - enabled: 0
-    path: Assets/Vr_folder/VRSampleScenes/Scenes/Flyer.unity
-    guid: 105cf9eb7fcb45844a1354966d06fcf1
-  - enabled: 0
-    path: Assets/Vr_folder/VRSampleScenes/Scenes/Shooter360.unity
-    guid: 77d89b9deefb6a5438a228683e280537
-  - enabled: 0
-    path: Assets/Vr_folder/VRSampleScenes/Scenes/Shooter180.unity
-    guid: b62ef4a8c87fa764bbfdb7d250ce1c08
   - enabled: 1
     path: Assets/My_Sceans/Game_start.unity
     guid: 0ae5cc63dc5d49248b8af61e8d9658d9
@@ -32,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/My_Sceans/KitchenDining.unity
     guid: cc4287f733e695642bd23768f7599bcc
+  - enabled: 1
+    path: Assets/My_Sceans/Bathroom.unity
+    guid: 4a9b6991d67c58e4181b7ec190906fe6
+  - enabled: 1
+    path: Assets/My_Sceans/Bedroom.unity
+    guid: 6ce1ec6838c4229489c1a821a1e4c9f1
+  - enabled: 1
+    path: Assets/My_Sceans/Livingroom.unity
+    guid: f0c86b4113458fc4e8221fda58db5cad
   m_configObjects: {}

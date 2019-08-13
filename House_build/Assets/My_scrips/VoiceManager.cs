@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.Windows.Speech;
 using System.Linq;
 using System;
+[RequireComponent(typeof(AudioSource))]
 
 public class VoiceManager : MonoBehaviour
 {
+
+    public static VoiceManager VM = null;
     private static KeywordRecognizer keywordRecognizer;
     private static Dictionary<string, Action> actions = new Dictionary<string, Action>();
     public AudioClip testSound;
@@ -56,7 +59,14 @@ public class VoiceManager : MonoBehaviour
     #endregion
 
 
-    
+    // void Awake(){
+    //     if (!audio){
+    //         audio = gameObject.GetComponent<AudioSource>().Play();
+    //     }
+    //     else{
+    //         Destroy(gameObject);
+    //     }
+    // }
     
     // Start is called before the first frame update
     void Start(){

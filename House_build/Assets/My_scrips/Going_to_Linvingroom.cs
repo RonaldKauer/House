@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Going_to_Linvingroom : MonoBehaviour
 {
-void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Living_room_but")
         {
@@ -14,4 +14,9 @@ void OnTriggerEnter(Collider other)
 
         }
     }
+
+    void OnMouseDown(){
+        SceneManager.LoadScene("Livingroom");
+    }
+
 }
