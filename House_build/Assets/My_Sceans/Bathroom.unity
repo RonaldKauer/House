@@ -1108,7 +1108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1900988837398842, guid: d1f5ea59f3a3fbd45809ab0816e93ca3, type: 3}
       propertyPath: m_TagString
-      value: el espejo
+      value: el espeho
       objectReference: {fileID: 0}
     - target: {fileID: 4023096864000816, guid: d1f5ea59f3a3fbd45809ab0816e93ca3, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2156,7 +2156,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0278215d34a75a344976968b4617e00c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b81c96d624bc40449aa956a3998ee020, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2581,7 +2581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1971730175136612, guid: b509eecd84d89c147b7e47cd8596a9db, type: 3}
       propertyPath: m_TagString
-      value: el fregadero
+      value: el lavamano
       objectReference: {fileID: 0}
     - target: {fileID: 23944667534771572, guid: b509eecd84d89c147b7e47cd8596a9db,
         type: 3}
@@ -2662,6 +2662,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3363688845933687667, guid: 3f53117ac19c4cd469fdf43467cc7732,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796999309972226724, guid: 3f53117ac19c4cd469fdf43467cc7732,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781261774724297246, guid: 3f53117ac19c4cd469fdf43467cc7732,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713971642082945629, guid: 3f53117ac19c4cd469fdf43467cc7732,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.00000049241083
+      objectReference: {fileID: 0}
     - target: {fileID: 6118600250337341928, guid: 3f53117ac19c4cd469fdf43467cc7732,
         type: 3}
       propertyPath: m_ReceiveShadows
@@ -2677,11 +2697,6 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6796999309972226724, guid: 3f53117ac19c4cd469fdf43467cc7732,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7144764878626504455, guid: 3f53117ac19c4cd469fdf43467cc7732,
         type: 3}
       propertyPath: m_ReceiveShadows
@@ -2691,21 +2706,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3363688845933687667, guid: 3f53117ac19c4cd469fdf43467cc7732,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tutorial
-      objectReference: {fileID: 0}
-    - target: {fileID: 2781261774724297246, guid: 3f53117ac19c4cd469fdf43467cc7732,
-        type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1713971642082945629, guid: 3f53117ac19c4cd469fdf43467cc7732,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: 0.00000049241083
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f53117ac19c4cd469fdf43467cc7732, type: 3}
