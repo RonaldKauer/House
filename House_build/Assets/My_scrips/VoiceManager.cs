@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Windows.Speech;
 using System.Linq;
 using System;
+using UnityEngine.UI;       //For text
+
 [RequireComponent(typeof(AudioSource))]
 
 public class VoiceManager : MonoBehaviour
@@ -12,14 +14,19 @@ public class VoiceManager : MonoBehaviour
     public static VoiceManager VM = null;
     private static KeywordRecognizer keywordRecognizer;
     private static Dictionary<string, Action> actions = new Dictionary<string, Action>();
+    private static Dictionary<string, string> phonetic = new Dictionary<string, string>();
     public AudioClip testSound;
     static AudioSource audio;
 
     static string item;
     static bool yes = false;
 
+    static Text display;
+    static string h = " || ";
+    static Image text_panel;
+
     #region bath text
-    static readonly string banera_text = "la bañera";
+    static readonly string banera_text = "la bañera"; 
     static readonly string toilet_text = "el inodoro";
     static readonly string sink_bath_text = "el lavamano";
     static readonly string mirror_text = "el espeho";
@@ -59,14 +66,15 @@ public class VoiceManager : MonoBehaviour
     #endregion
 
 
-    // void Awake(){
-    //     if (!audio){
-    //         audio = gameObject.GetComponent<AudioSource>().Play();
-    //     }
-    //     else{
-    //         Destroy(gameObject);
-    //     }
-    // }
+    void Awake(){
+        if (!audio){
+            audio = gameObject.GetComponent<AudioSource>();
+            audio.Play();
+        }
+        // else{
+        //     Destroy(gameObject);
+        // }
+    }
     
     // Start is called before the first frame update
     void Start(){
@@ -115,11 +123,55 @@ public class VoiceManager : MonoBehaviour
         actions.Add(trophy_text, overall);
         #endregion
 
+        phonetic.Add(banera_text, "la ba-nee-era");
+        phonetic.Add(toilet_text, "el ee-no-do-ro");
+        phonetic.Add(sink_bath_text, "el la-va-ma-nose");
+        //TODO add espejo
+
+
+        phonetic.Add(bed_text, "la ka-ma");
+        phonetic.Add(desk_text, "el es-kree-to-ree-o");
+        phonetic.Add(copmuter_text, "la cum-poo-ta-doe-rah");
+        phonetic.Add(dresser_text, "el ves-tee-door");
+        phonetic.Add(book_text, "el lee-bro");
+        phonetic.Add(book_shelf_text, "el es-tan-te de lee-bros");
+        //TODO computer chair
+
+        phonetic.Add(sink_kit_text, "el fre-gah-deh-ro");
+        phonetic.Add(table_text, "la may-sah");
+        //TODO add silla
+        phonetic.Add(stove_text, "la es-too-fa");
+        phonetic.Add(pan_text, "la sar-ten");
+        phonetic.Add(plate_text, "el pla-toe");
+        //TODO add olla
+        phonetic.Add(teapot_text, "la te-te-ra");
+        phonetic.Add(fridge_text, "el re-fridge-er-ay-tore");
+
+        phonetic.Add(tv_text, "la te-le-vee-sion");
+        phonetic.Add(sofa_text, "el so-fah");
+        phonetic.Add(lamp_text, "la lam-pa-ra");
+        //TODO el sillon
+        phonetic.Add(picture_frame_text, "el quah-dro");
+        phonetic.Add(picture_text, "la peen-to-ra");
+        phonetic.Add(trophy_text, "el tro-fe-o");
+    
+        Debug.Log("Getting Audio Source");
+        audio = GetComponent<AudioSource>();
+        Debug.Log("Got Audio Source");
+
+        Debug.Log("Getting Text");
+        display = GetComponentInChildren<Text>();
+        display.text = "";
+        Debug.Log("Got Text");
+
+        text_panel = GetComponentInChildren<Image>();
+        text_panel.enabled = false;
+
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());   
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech; 
         keywordRecognizer.Start();
 
-        audio = GetComponent<AudioSource>();
+        
     }
 
     private void RecognizedSpeech(PhraseRecognizedEventArgs speech){
@@ -133,12 +185,33 @@ public class VoiceManager : MonoBehaviour
     public static void GetItem (string item_tag){
         item = item_tag;
         Debug.Log("item = " + item);
+        text_panel.enabled = true;
         yes = true;
+        if (item == mirror_text){
+            display.text = "el espejo" + h + "el eh-speh-ho";
+        }
+        else if(item == Computer_chair_text){
+            display.text = "la silla de la computadora" + h + "la see-ya day la cum-poo-ta-doe-rah";
+        }
+        else if(item == chair_text){
+            display.text = "la silla" + h + "la see-ya";
+        }
+        else if(item == accent_chair_text){
+            display.text = "el sillon" + h + "el si-yon";
+        }
+        else if (item == pot_text){
+            display.text = "el olla" + h + "la oh-ya";
+        }
+        else{
+            display.text = item + h + phonetic[item];
+        }
     }
 
     //function to play the correct sound
     private void overall(){
         audio.Play();
         yes = false;
+        text_panel.enabled = false;
+        display.text = "";
     }
 }

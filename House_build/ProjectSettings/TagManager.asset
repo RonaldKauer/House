@@ -4,11 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Close_button
-  - Button
   - touch_controller
   - Kitchen_but
-  - Chair
   - Hand
   - Living_room_but
   - Bedroom_but

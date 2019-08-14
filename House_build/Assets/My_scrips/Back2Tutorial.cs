@@ -15,4 +15,9 @@ public class Back2Tutorial : MonoBehaviour
 
         }
     } 
+
+        void OnMouseDown()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
 }

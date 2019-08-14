@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Going_to_Bedroom : MonoBehaviour
 {
-void OnTriggerEnter(Collider other)
+
+    void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Bedroom_but")
         {
