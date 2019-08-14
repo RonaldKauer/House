@@ -131,8 +131,6 @@ public class VoiceManager : MonoBehaviour
             phonetic.Add(banera_text, "la ba-nee-era");
             phonetic.Add(toilet_text, "el ee-no-do-ro");
             phonetic.Add(sink_bath_text, "el la-va-ma-nose");
-            //TODO add espejo
-
 
             phonetic.Add(bed_text, "la ka-ma");
             phonetic.Add(desk_text, "el es-kree-to-ree-o");
@@ -140,34 +138,28 @@ public class VoiceManager : MonoBehaviour
             phonetic.Add(dresser_text, "el ves-tee-door");
             phonetic.Add(book_text, "el lee-bro");
             phonetic.Add(book_shelf_text, "el es-tan-te de lee-bros");
-            //TODO computer chair
 
             phonetic.Add(sink_kit_text, "el fre-gah-deh-ro");
             phonetic.Add(table_text, "la may-sah");
-            //TODO add silla
             phonetic.Add(stove_text, "la es-too-fa");
             phonetic.Add(pan_text, "la sar-ten");
             phonetic.Add(plate_text, "el pla-toe");
-            //TODO add olla
             phonetic.Add(teapot_text, "la te-te-ra");
             phonetic.Add(fridge_text, "el re-fridge-er-ay-tore");
 
             phonetic.Add(tv_text, "la te-le-vee-sion");
             phonetic.Add(sofa_text, "el so-fah");
             phonetic.Add(lamp_text, "la lam-pa-ra");
-            //TODO el sillon
             phonetic.Add(picture_frame_text, "el quah-dro");
             phonetic.Add(picture_text, "la peen-to-ra");
             phonetic.Add(trophy_text, "el tro-fe-o");
+            phonetic.Add(speaker_text, "el al-tah-voz");
         }
-        Debug.Log("Getting Audio Source");
-        audio = GetComponent<AudioSource>();
-        Debug.Log("Got Audio Source");
 
-        Debug.Log("Getting Text");
+        audio = GetComponent<AudioSource>();
+
         display = GetComponentInChildren<Text>();
         display.text = "";
-        Debug.Log("Got Text");
 
         text_panel = GetComponentInChildren<Image>();
         text_panel.enabled = false;
