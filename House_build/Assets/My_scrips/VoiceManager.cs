@@ -13,10 +13,11 @@ public class VoiceManager : MonoBehaviour
 
     public static VoiceManager VM = null;
     private static KeywordRecognizer keywordRecognizer;
-    private static Dictionary<string, Action> actions = new Dictionary<string, Action>();
+    private Dictionary<string, Action> actions = new Dictionary<string, Action>();
     private static Dictionary<string, string> phonetic = new Dictionary<string, string>();
     public AudioClip testSound;
     static AudioSource audio;
+    // static BadImageFormatException 
 
     static string item;
     static bool yes = false;
@@ -71,9 +72,12 @@ public class VoiceManager : MonoBehaviour
             audio = gameObject.GetComponent<AudioSource>();
             audio.Play();
         }
-        // else{
-        //     Destroy(gameObject);
-        // }
+        if (VM == null){
+            VM = this;
+        }
+        else{
+            Destroy(gameObject);
+        }
     }
     
     // Start is called before the first frame update
@@ -123,38 +127,39 @@ public class VoiceManager : MonoBehaviour
         actions.Add(trophy_text, overall);
         #endregion
 
-        phonetic.Add(banera_text, "la ba-nee-era");
-        phonetic.Add(toilet_text, "el ee-no-do-ro");
-        phonetic.Add(sink_bath_text, "el la-va-ma-nose");
-        //TODO add espejo
+        if(!phonetic.ContainsKey(banera_text)){
+            phonetic.Add(banera_text, "la ba-nee-era");
+            phonetic.Add(toilet_text, "el ee-no-do-ro");
+            phonetic.Add(sink_bath_text, "el la-va-ma-nose");
+            //TODO add espejo
 
 
-        phonetic.Add(bed_text, "la ka-ma");
-        phonetic.Add(desk_text, "el es-kree-to-ree-o");
-        phonetic.Add(copmuter_text, "la cum-poo-ta-doe-rah");
-        phonetic.Add(dresser_text, "el ves-tee-door");
-        phonetic.Add(book_text, "el lee-bro");
-        phonetic.Add(book_shelf_text, "el es-tan-te de lee-bros");
-        //TODO computer chair
+            phonetic.Add(bed_text, "la ka-ma");
+            phonetic.Add(desk_text, "el es-kree-to-ree-o");
+            phonetic.Add(copmuter_text, "la cum-poo-ta-doe-rah");
+            phonetic.Add(dresser_text, "el ves-tee-door");
+            phonetic.Add(book_text, "el lee-bro");
+            phonetic.Add(book_shelf_text, "el es-tan-te de lee-bros");
+            //TODO computer chair
 
-        phonetic.Add(sink_kit_text, "el fre-gah-deh-ro");
-        phonetic.Add(table_text, "la may-sah");
-        //TODO add silla
-        phonetic.Add(stove_text, "la es-too-fa");
-        phonetic.Add(pan_text, "la sar-ten");
-        phonetic.Add(plate_text, "el pla-toe");
-        //TODO add olla
-        phonetic.Add(teapot_text, "la te-te-ra");
-        phonetic.Add(fridge_text, "el re-fridge-er-ay-tore");
+            phonetic.Add(sink_kit_text, "el fre-gah-deh-ro");
+            phonetic.Add(table_text, "la may-sah");
+            //TODO add silla
+            phonetic.Add(stove_text, "la es-too-fa");
+            phonetic.Add(pan_text, "la sar-ten");
+            phonetic.Add(plate_text, "el pla-toe");
+            //TODO add olla
+            phonetic.Add(teapot_text, "la te-te-ra");
+            phonetic.Add(fridge_text, "el re-fridge-er-ay-tore");
 
-        phonetic.Add(tv_text, "la te-le-vee-sion");
-        phonetic.Add(sofa_text, "el so-fah");
-        phonetic.Add(lamp_text, "la lam-pa-ra");
-        //TODO el sillon
-        phonetic.Add(picture_frame_text, "el quah-dro");
-        phonetic.Add(picture_text, "la peen-to-ra");
-        phonetic.Add(trophy_text, "el tro-fe-o");
-    
+            phonetic.Add(tv_text, "la te-le-vee-sion");
+            phonetic.Add(sofa_text, "el so-fah");
+            phonetic.Add(lamp_text, "la lam-pa-ra");
+            //TODO el sillon
+            phonetic.Add(picture_frame_text, "el quah-dro");
+            phonetic.Add(picture_text, "la peen-to-ra");
+            phonetic.Add(trophy_text, "el tro-fe-o");
+        }
         Debug.Log("Getting Audio Source");
         audio = GetComponent<AudioSource>();
         Debug.Log("Got Audio Source");
@@ -213,5 +218,10 @@ public class VoiceManager : MonoBehaviour
         yes = false;
         text_panel.enabled = false;
         display.text = "";
+    }
+
+    void OnDestroy(){
+        actions.Clear();
+        phonetic.Clear();
     }
 }

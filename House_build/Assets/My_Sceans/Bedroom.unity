@@ -1064,6 +1064,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RonsFPSController
       objectReference: {fileID: 0}
+    - target: {fileID: 3606419552235970467, guid: 696f622a75992ca42af3cedda9f3cbd7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 477275807758831431, guid: 696f622a75992ca42af3cedda9f3cbd7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2290,11 +2295,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: playerController
       objectReference: {fileID: 0}
-    - target: {fileID: 1145850684649356881, guid: 113471285bb68c547b23ad81a8296bed,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1147475891823147947, guid: 113471285bb68c547b23ad81a8296bed,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2350,7 +2350,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 303848267, guid: 113471285bb68c547b23ad81a8296bed, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 113471285bb68c547b23ad81a8296bed, type: 3}
 --- !u!1 &1795251092
 GameObject:
