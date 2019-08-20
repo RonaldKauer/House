@@ -10,6 +10,8 @@ public class Scavengerhunt_glow : MonoBehaviour
 	[SerializeField] private Material m_OverMaterial;                                      
 	[SerializeField] private VRInteractiveItem m_InteractiveItem;
 	[SerializeField] private Renderer m_Renderer;
+	[SerializeField] private Material m_ClickedMaterialCorrect; 
+	[SerializeField] private Material m_ClickedMaterialIncorrect; 
     private AudioSource Audio;
     protected string item;
 
@@ -40,7 +42,11 @@ public class Scavengerhunt_glow : MonoBehaviour
 		// if level is 1 and item is clicked on, update score and level
 		if (this.gameObject == ScavengerHunt.sca.getObject()) {
 			ScavengerHunt.sca.callRoutineAndIncrementTracker ();
+			m_Renderer.material = m_ClickedMaterialCorrect;
             ScavengerHunt.sca.updateText();
+		}
+		else{
+			m_Renderer.material = m_ClickedMaterialIncorrect;
 		}
     }
 
@@ -79,7 +85,11 @@ public class Scavengerhunt_glow : MonoBehaviour
 		// if level is 1 and item is clicked on, update score and level
 		if (this.gameObject == ScavengerHunt.sca.getObject()) {
 			ScavengerHunt.sca.callRoutineAndIncrementTracker ();
+			m_Renderer.material = m_ClickedMaterialCorrect;
             ScavengerHunt.sca.updateText();
+		}
+		else{
+			m_Renderer.material = m_ClickedMaterialIncorrect;
 		}
 
 	}

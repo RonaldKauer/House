@@ -857,6 +857,96 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ef0b79f521d2dc41a501116cd2c74f2, type: 3}
+--- !u!1001 &1314107676
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1827744554707666091, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_Name
+      value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.9396
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1221985
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6762092
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.3587174
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744555675371533, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_Text
+      value: "welcome to the bedroom,\r\nel dormitorio (el door-me-toh-rio), press
+        the button to back the previous screen"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fa2b153eeb428542a9f4febe195177d, type: 3}
 --- !u!4 &1343307424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6220398523367713952, guid: 151d39543a34479409adc8b2b6ac2bf8,

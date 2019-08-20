@@ -919,7 +919,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1310274815
 GameObject:
@@ -1044,7 +1044,7 @@ Transform:
   - {fileID: 546965212}
   - {fileID: 774359080}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1371999226
 GameObject:
@@ -1550,6 +1550,81 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &1936774344
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1827744554707666091, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_Name
+      value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.315622
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.210933
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744554707666095, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827744555675371533, guid: 6fa2b153eeb428542a9f4febe195177d,
+        type: 3}
+      propertyPath: m_Text
+      value: welcome to the kitchen and dinnigroom, la cocina (la ko-si-na) y el comedor
+        (ko-meh-door) , press the button to back the previous screen
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fa2b153eeb428542a9f4febe195177d, type: 3}
 --- !u!4 &530451410876180829
 Transform:
   m_ObjectHideFlags: 0
@@ -3354,7 +3429,7 @@ Transform:
   - {fileID: 1750312326}
   - {fileID: 1239988109458720717}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8113780803877777809
 MeshFilter:
