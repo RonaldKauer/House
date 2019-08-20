@@ -130,7 +130,7 @@ public class VoiceManager : MonoBehaviour
         if(!phonetic.ContainsKey(banera_text)){
             phonetic.Add(banera_text, "la ba-nee-era");
             phonetic.Add(toilet_text, "el ee-no-do-ro");
-            phonetic.Add(sink_bath_text, "el la-va-ma-nose");
+            phonetic.Add(sink_bath_text, "el la-va-ma-no");
 
             phonetic.Add(bed_text, "la ka-ma");
             phonetic.Add(desk_text, "el es-kree-to-ree-o");
