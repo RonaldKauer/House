@@ -533,8 +533,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 275007858}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.489, y: 2.63985, z: -2.43}
-  m_LocalScale: {x: 1.785849, y: 1.2067436, z: 0.7836824}
+  m_LocalPosition: {x: 0.493, y: 2.63985, z: -2.43}
+  m_LocalScale: {x: 1.785849, y: 1.2067436, z: 0.7816448}
   m_Children: []
   m_Father: {fileID: 1091457747}
   m_RootOrder: 6
@@ -3584,7 +3584,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -2.8563771e+20, z: 8.55e-43, w: -3.8854102e+20}
+  m_BoundingSphereOverride: {x: 4.5904e-41, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7399,7 +7399,7 @@ MonoBehaviour:
   - {fileID: 3671760541650599366}
   - {fileID: 8257216061365666875}
   - {fileID: 8478426544088921814}
-  - {fileID: 8965274905155051384}
+  - {fileID: 8965274905863009108}
   - {fileID: 1882576105246006949}
   - {fileID: 7765606219540465311}
   - {fileID: 5254586699834078381}
@@ -7428,7 +7428,7 @@ MonoBehaviour:
   - "D\xF3nde est\xE1 el fregadero?"
   - "D\xF3nde est\xE1 la sarten?"
   - "D\xF3nde est\xE1 el inodoro?"
-  - "D\xF3nde est\xE1el vestidor?"
+  - "D\xF3nde est\xE1 el vestidor?"
   - "D\xF3nde est\xE1 la ba\xF1era?"
   - "D\xF3nde est\xE1 la silla de la computadora?"
   - "D\xF3nde est\xE1 la computadora?"
@@ -8935,8 +8935,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050772036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.97, y: 2.63985, z: -3.218}
-  m_LocalScale: {x: 1.8844001, y: 1.2454807, z: 0.3509702}
+  m_LocalPosition: {x: -0.97, y: 2.63985, z: -3.215}
+  m_LocalScale: {x: 1.8844001, y: 1.2454807, z: 0.35247937}
   m_Children: []
   m_Father: {fileID: 1091457747}
   m_RootOrder: 4
@@ -26004,7 +26004,7 @@ Transform:
   m_GameObject: {fileID: 8965274905155051384}
   m_LocalRotation: {x: 0.50000006, y: -0.5, z: 0.49999994, w: -0.5}
   m_LocalPosition: {x: -4.2572308, y: 11.189235, z: 14.434826}
-  m_LocalScale: {x: 0.0122, y: 0.0122, z: 0.009}
+  m_LocalScale: {x: 0.012565999, y: 0.012565999, z: 0.009269999}
   m_Children: []
   m_Father: {fileID: 2957317133116766375}
   m_RootOrder: 1
@@ -26016,7 +26016,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8965274905155051384}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5c86b5812b995b4bb78610367ff31eb, type: 3}
   m_Name: 
@@ -26257,8 +26257,10 @@ MonoBehaviour:
   m_OverMaterial: {fileID: 2100000, guid: 80012b0f4fc368b438d8464398af6003, type: 2}
   m_InteractiveItem: {fileID: 8965274905863009104}
   m_Renderer: {fileID: 8965274905863009106}
-  m_ClickedMaterialCorrect: {fileID: 0}
-  m_ClickedMaterialIncorrect: {fileID: 0}
+  m_ClickedMaterialCorrect: {fileID: 2100000, guid: 3c13ba8cae72e84469d14841ac654277,
+    type: 2}
+  m_ClickedMaterialIncorrect: {fileID: 2100000, guid: 8c6609eaf8c23e347a758205690183bb,
+    type: 2}
 --- !u!1 &8975225525575581140
 GameObject:
   m_ObjectHideFlags: 0
