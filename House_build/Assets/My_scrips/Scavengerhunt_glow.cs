@@ -17,6 +17,7 @@ public class Scavengerhunt_glow : MonoBehaviour
 
     void Start()
     {
+		ScavengerHunt.sca._wrongNum = 0;
         item = gameObject.tag;
         Debug.Log("from glow "+item);
     }
@@ -37,16 +38,24 @@ public class Scavengerhunt_glow : MonoBehaviour
     } 
 
     void OnMouseDown(){
-        //Audio = GetComponent<AudioSource> ();
 	    Debug.Log (ScavengerHunt.sca.getObject());
 		// if level is 1 and item is clicked on, update score and level
 		if (this.gameObject == ScavengerHunt.sca.getObject()) {
+			ScavengerHunt.sca._numWrong.Add(ScavengerHunt.sca._wrongNum);
+			Debug.Log(ScavengerHunt.sca._wrongNum);
+			ScavengerHunt.sca._wrongNum = 0;
 			ScavengerHunt.sca.callRoutineAndIncrementTracker ();
 			m_Renderer.material = m_ClickedMaterialCorrect;
             ScavengerHunt.sca.updateText();
 		}
 		else{
+			ScavengerHunt.sca._wrongNum++;
+			Debug.Log(ScavengerHunt.sca._wrongNum);
 			m_Renderer.material = m_ClickedMaterialIncorrect;
+			if(ScavengerHunt.sca._wrongNum == 3){
+				ScavengerHunt.sca.callRoutineAndIncrementTracker ();
+            	ScavengerHunt.sca.updateText();
+			}
 		}
     }
 
@@ -81,16 +90,23 @@ public class Scavengerhunt_glow : MonoBehaviour
 	//Handle the Click event
 	private void HandleClick()
 	{
-		Debug.Log (ScavengerHunt.sca.getObject());
+	    Debug.Log (ScavengerHunt.sca.getObject());
 		// if level is 1 and item is clicked on, update score and level
 		if (this.gameObject == ScavengerHunt.sca.getObject()) {
+			ScavengerHunt.sca._numWrong.Add(ScavengerHunt.sca._wrongNum);
+			Debug.Log(ScavengerHunt.sca._wrongNum);
+			ScavengerHunt.sca._wrongNum = 0;
 			ScavengerHunt.sca.callRoutineAndIncrementTracker ();
 			m_Renderer.material = m_ClickedMaterialCorrect;
             ScavengerHunt.sca.updateText();
 		}
 		else{
+			ScavengerHunt.sca._wrongNum++;
+			Debug.Log(ScavengerHunt.sca._wrongNum);
 			m_Renderer.material = m_ClickedMaterialIncorrect;
+			if(ScavengerHunt.sca._wrongNum == 3){
+				ScavengerHunt.sca.callRoutineAndIncrementTracker ();
+            	ScavengerHunt.sca.updateText();
+			}
 		}
-
-	}
 }

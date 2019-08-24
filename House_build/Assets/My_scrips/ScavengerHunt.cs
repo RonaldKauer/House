@@ -15,6 +15,9 @@ public class ScavengerHunt : MonoBehaviour
 	public string[] HuntPrompts; // theh string that display "donde esta" for the hunt
 	public List<int> checking = new List<int>();
 
+	public List<int> _numWrong = new List<int>();
+	public int _wrongNum = 0;
+
 	public AudioClip[] itemsAudioClips; //the audio fro the items
 	public AudioClip[] questionsAudioClips; // the auido "donde esta.."
 	public GameObject[] Items; // the items
@@ -49,6 +52,7 @@ public class ScavengerHunt : MonoBehaviour
         HuntQuestionsAudioClips = new AudioClip[10];
         HuntItems = new GameObject[10];
         HuntPrompts = new string[10];
+
         RandTheHunt();
 
 		A.clip = HuntQuestionsAudioClips[tracker];
@@ -95,7 +99,7 @@ public class ScavengerHunt : MonoBehaviour
 
 	public void updateText(){
         Debug.Log("End ");
-		_thetraker.text = tracker.ToString() + "/10 itesm found";
+		_thetraker.text = tracker.ToString() + "/10 item found";
 		_thePromts.text = HuntPrompts[tracker].ToString();
         //endText.text = "Thank you for playing";
         
@@ -123,12 +127,22 @@ public class ScavengerHunt : MonoBehaviour
 
 	IEnumerator PlayAudio(){
 		Debug.Log ("PlayClip");
-		A.clip = HuntItemsAudioClips [tracker];
-		A.Play ();
-		tracker++;
-		yield return new WaitForSeconds (A.clip.length + 1);
-		A.clip = HuntQuestionsAudioClips [tracker];
-		A.Play ();
+		if(_wrongNum == 3){
+			_numWrong.Add(_wrongNum);
+			_wrongNum = 0;
+			tracker++;
+			// yield return new WaitForSeconds (A.clip.length + 1);
+			A.clip = HuntQuestionsAudioClips [tracker];
+			A.Play ();
+		}
+		else{
+			A.clip = HuntItemsAudioClips [tracker];
+			A.Play ();
+			tracker++;
+			yield return new WaitForSeconds (A.clip.length + 1);
+			A.clip = HuntQuestionsAudioClips [tracker];
+			A.Play ();
+		}
 	}
 
 }
