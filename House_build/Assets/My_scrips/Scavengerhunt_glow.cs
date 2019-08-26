@@ -109,4 +109,5 @@ public class Scavengerhunt_glow : MonoBehaviour
             	ScavengerHunt.sca.updateText();
 			}
 		}
+	}
 }
